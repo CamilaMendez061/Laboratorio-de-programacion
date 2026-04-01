@@ -1,0 +1,16 @@
+        //crear tabla así desde acá? O hacerlo desde mysql directamente?
+        String sqlCreacionAlumnos = "CREATE TABLE IF NOT EXISTS alumnos("+
+        "id INT NOT NULL AUTO_INCREMENT,"+
+        "apellido_nombre VARCHAR(30) NOT NULL,"+
+        "dni INT(8) UNSIGNED NOT NULL UNIQUE,"+
+        "email VARCHAR(30)"+
+        "telefono VARCHAR(15) UNSIGNED"+
+        "carrera_id INT NOT NULL"+
+        "PRIMARY KEY (id),"+
+        "FOREIGN KEY (carrera_id) REFERENCES carreras (id)"+
+        "ON DELETE NO ACTION ON UPDATE CASCADE)";
+
+        String sqlCreacionCarreras = "CREATE TABLE IF NOT EXISTS carreras("+
+        "id INT NOT NULL AUTO_INCREMENT,"+
+        "nombre VARCHAR(50) NOT NULL UNIQUE,"+
+        "PRIMARY KEY (id))";

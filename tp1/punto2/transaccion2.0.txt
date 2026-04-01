@@ -1,0 +1,136 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Transaccion {
+
+    //método para depositar en cuenta
+    public static void depositar(int cuenta, double importe) {
+        int existencia = existeCuenta(cuenta);
+
+        if (existencia == -1) {
+            System.out.println("No es posible realizar la operación.");
+        } else if (existencia == 0) {
+            System.out.println("La cuenta ingresada no existe.");
+        } else {
+            double saldo = getSaldo(cuenta);
+
+            //saldo == -1 si se ha producido una excepción al tratar de obtener el valor de 'saldo'
+            if (saldo == -1){
+                System.out.println("No es posible realizar la operación.");
+            } else {
+                saldo = saldo + importe;
+                try {
+                    updateTablas(cuenta, saldo, "D", importe);
+                    System.out.println("Depósito realizado con éxito!");
+                } catch (SQLException e) {
+                    System.out.println("Ha ocurrido un error al tratar de actualizar las tablas.");
+                    System.out.println(e.getMessage());
+                }
+            }
+
+        }
+    }
+
+    //método para extraer de cuenta
+    public static void extraer(int cuenta, double importe) {
+        int existencia = existeCuenta(cuenta);
+
+        if (existencia == -1) {
+            System.out.println("No es posible realizar la operación.");
+        } else if (existencia == 0) {
+            System.out.println("La cuenta ingresada no existe.");
+        } else {
+        double saldo = getSaldo(cuenta);
+
+        //saldo == -1 si se ha producido una excepción al tratar de obtener el valor de 'saldo'
+        if (saldo == -1) {
+            System.out.println("No es posible realizar la operación.");
+        } else {
+            if (saldo < importe) {
+                System.out.println("No es posible realizar la extracción porque la cuenta no posee el saldo suficiente.");
+            } else {
+                saldo = saldo - importe;
+                try {
+                    updateTablas(cuenta, saldo, "E", importe);
+                    System.out.println("Extracción realizada con éxito!");
+                } catch (Exception e) {
+                System.out.println("Ha ocurrido un error al tratar de actualizar las tablas.");
+                System.out.println(e.getMessage());
+                }
+            }
+        }
+        }
+    }
+
+    //método privado para saber si existe la cuenta ingresada
+    //retorna 0 si la cuenta no existe. Retorna -1 si ha ocurrido una excepción
+    /*private static int existeCuenta(int cuenta) {
+        String sql = "SELECT * FROM cuentas WHERE cuenta = ?";
+        int existeCuenta = 0;
+
+        try (Connection conn = ConexionDB.getConexion();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setInt(1, cuenta);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    existeCuenta = cuenta;
+                }
+            } 
+        } catch (SQLException e) {
+            System.out.println("Ha ocurrido un error al tratar de determinar la existencia de la cuenta.");
+            System.out.println(e.getMessage());
+            existeCuenta = -1;
+        }
+        return existeCuenta;
+    }*/
+
+    //método privado para obtener el valor de 'saldo' de la cuenta
+    //retorna -1 si se lanza una excepción
+    private static double getSaldo(int cuenta) {
+        String sql = "SELECT * FROM cuentas WHERE cuenta = ?";
+        double saldo = -1;
+
+        try (Connection conn = ConexionDB.getConexion();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            //configurar parámetros para obtener valor de 'saldo' de la cuenta 
+            pstmt.setInt(1, cuenta);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    saldo = rs.getDouble("saldo");    
+                }
+            } 
+        } catch (SQLException e) {
+            System.out.println("Ha ocurrido un error al tratar de obtener el valor de 'saldo'.");
+            System.out.println(e.getMessage());
+        }
+
+        return saldo;
+    }
+
+    //método privado para actualizar tablas con nuevos datos
+    private static void updateTablas(int cuenta, double saldo, String movimiento, double importe) throws SQLException {
+        String sql1 = "UPDATE cuentas SET saldo = ? WHERE cuenta = ?";
+        String sql2 = "INSERT INTO movimientos (cuenta, movimiento, importe) VALUES (?, ?, ?)";
+        
+        try (Connection conn = ConexionDB.getConexion();
+            PreparedStatement pstmt1 = conn.prepareStatement(sql1);
+            PreparedStatement pstmt2 = conn.prepareStatement(sql2)) {
+            
+            //modificar la tabla 'cuentas' con el nuevo valor de 'saldo'
+            pstmt1.setDouble(1, saldo);
+            pstmt1.setInt(2, cuenta);
+            pstmt1.executeUpdate();
+
+            //insertar nuevos valores a tabla 'movimientos'
+            pstmt2.setInt(1, cuenta);
+            pstmt2.setString(2, movimiento);
+            pstmt2.setDouble(3, importe);
+            pstmt2.executeUpdate();
+        }
+    }
+
+}
