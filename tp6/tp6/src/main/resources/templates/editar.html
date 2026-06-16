@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Editar Alumno</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+
+        <h1 class="text-center">Editar Alumno</h1>
+
+        <div class="card-body">
+          <form th:action="@{/alumnos/{id}(id=${alumno.id})}" th:object="${alumno}" method="post">
+            <div class="form-group">
+              <label>Apellido y Nombres:</label>
+              <input type="text" name="apellidoNombre" th:field="*{apellidoNombre}" class="form-control"
+                placeholder="Ingrese apellido y nombres" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>DNI:</label>
+              <input type="number" name="dni" th:field="*{dni}" class="form-control" placeholder="Ingrese DNI" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" name="email" th:field="*{email}" class="form-control" placeholder="Ingrese su email"
+                required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Teléfono:</label>
+              <input type="text" name="telefono" th:field="*{telefono}" class="form-control"
+                placeholder="Ingrese número de teléfono" required>
+            </div>
+            <br>
+
+            <div class="box-footer">
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

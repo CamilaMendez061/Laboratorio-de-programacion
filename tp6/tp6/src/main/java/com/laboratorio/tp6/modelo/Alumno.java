@@ -27,6 +27,10 @@ public class Alumno {
     @Column(name = "telefono", length = 15)
     private String telefono;
 
+    public Alumno() {
+        
+    }
+
     public Alumno(int id, String apellidoNombre, int dni, String email, String telefono) {
         this.id = id;
         this.apellidoNombre = apellidoNombre;
