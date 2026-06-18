@@ -44,6 +44,17 @@
                 placeholder="Ingresar número de teléfono" required>
             </div>
             <br>
+            <div class="form-group row">
+              <label>Carrera:</label>
+              <div class="col-sm-8">
+                <select th:field="*{carrera}" class="form-control" required>
+                  <th:block th:each="carreraEach : ${listaCarreras}">
+                    <option th:text="${carreraEach.nombre}" th:value="${carreraEach.id}"></option>
+                  </th:block>
+                </select>
+              </div>
+            </div>
+            <br>
             <div class="box-footer">
               <button class="btn btn-success">Guardar</button>
             </div>

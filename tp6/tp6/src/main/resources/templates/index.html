@@ -36,6 +36,7 @@
           <th>DNI</th>
           <th>Email</th>
           <th>Teléfono</th>
+          <th>Carrera</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -45,6 +46,7 @@
           <td th:text="${alumno.dni}">DNI</td>
           <td th:text="${alumno.email}">Email</td>
           <td th:text="${alumno.telefono}">Teléfono</td>
+          <td th:text="${alumno.carrera.nombre}">Carrera</td>
           <td>
             <a th:href="@{/alumnos/editar/{id}(id=${alumno.id})}" class="btn btn-info">Modificar</a>
             <a th:href="@{/alumnos/{id}(id=${alumno.id})}" class="btn btn-danger">Eliminar</a>

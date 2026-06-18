@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.laboratorio.tp6.modelo.Alumno;
+import com.laboratorio.tp6.modelo.Carrera;
 import com.laboratorio.tp6.servicio.AlumnoServicio;
+import com.laboratorio.tp6.servicio.CarreraServicio;
+
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 @RequestMapping("/alumnos")
@@ -20,7 +22,10 @@ public class AlumnoControlador {
 
     @Autowired
     private AlumnoServicio servicio;
-
+    
+    @Autowired
+    private CarreraServicio carrera;
+    
     @GetMapping
     public String listarAlumnos(Model modelo) {
         List<Alumno> alumnos = servicio.listar();
@@ -32,6 +37,8 @@ public class AlumnoControlador {
     public String formularioDeRegistrarAlumno(Model modelo) {
         Alumno alumno = new Alumno();
         modelo.addAttribute("alumno", alumno);
+        List<Carrera> listaCarreras = carrera.listar();
+        modelo.addAttribute("listaCarreras", listaCarreras);
         return "crear";
     }
 
@@ -44,18 +51,20 @@ public class AlumnoControlador {
     @GetMapping("/editar/{id}")
     public String mostrarFormularioDeEditar(@PathVariable int id, Model modelo) {
         modelo.addAttribute("alumno", servicio.obtenerAlumnoPorId(id));
+        List<Carrera> listaCarreras = carrera.listar();
+        modelo.addAttribute("listaCarreras", listaCarreras);
         return "editar";
     }
 
     @PostMapping("/{id}")
     public String actualizarAlumno(@PathVariable int id, @ModelAttribute("alumno") Alumno alumno, Model modelo) {
-        System.out.println("ENTRÉ AL POST");
         Alumno alumnoExistente = servicio.obtenerAlumnoPorId(id);
         alumnoExistente.setId(id);
         alumnoExistente.setApellidoNombre(alumno.getApellidoNombre());
         alumnoExistente.setDni(alumno.getDni());
         alumnoExistente.setEmail(alumno.getEmail());
         alumnoExistente.setTelefono(alumno.getTelefono());
+        alumnoExistente.setCarrera(alumno.getCarrera());
         servicio.actualizarAlumno(alumnoExistente);
         return "redirect:/alumnos";
     }

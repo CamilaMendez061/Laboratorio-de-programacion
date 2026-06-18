@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -27,16 +29,21 @@ public class Alumno {
     @Column(name = "telefono", length = 15)
     private String telefono;
 
+    @ManyToOne
+    @JoinColumn(name = "carrera_id")
+    private Carrera carrera;
+
     public Alumno() {
         
     }
 
-    public Alumno(int id, String apellidoNombre, int dni, String email, String telefono) {
+    public Alumno(int id, String apellidoNombre, int dni, String email, String telefono, Carrera carrera) {
         this.id = id;
         this.apellidoNombre = apellidoNombre;
         this.dni = dni;
         this.email = email;
         this.telefono = telefono;
+        this.carrera = carrera;
     }
 
     public int getId() {
@@ -59,6 +66,11 @@ public class Alumno {
         return telefono;
     }
 
+    public Carrera getCarrera() {
+        return carrera;
+    }
+
+
     public void setId(int id) {
         this.id = id;
     }
@@ -77,6 +89,10 @@ public class Alumno {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
     }
 
 }
