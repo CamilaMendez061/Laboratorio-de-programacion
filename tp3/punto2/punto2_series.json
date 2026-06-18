@@ -1,0 +1,222 @@
+{
+    "series": [
+        {
+            "id": 1,
+            "titulo": "Beef",
+            "creador": "Lee Sung Jin",
+            "anioLanzamiento": 2023,
+            "cantTemporadas": 2,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 10
+                },
+                {
+                    "temporada": 2,
+                    "episodios": 8
+                }
+            ],
+            "actoresPrincipales": [
+                "Steven Yeun",
+                "Ali Wong",
+                "Oscar Isaac",
+                "Carey Mulligan"
+            ],
+            "genero": [
+                "Comedia dramática",
+                "Drama",
+                "Thriller",
+                "Tragicomedia"
+            ],
+            "estado": "finalizada",
+            "calificacion": 8.4
+        },
+        {
+            "id": 2,
+            "titulo": "American Horror Story",
+            "creador": "Ryan Murphy y Brad Falchuk",
+            "anioLanzamiento": 2011,
+            "cantTemporadas": 12,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 12
+                },
+                {
+                    "temporada": 2,
+                    "episodios": 13
+                },
+                {
+                    "temporada": 3,
+                    "episodios": 13
+                },
+                {
+                    "temporada": 4,
+                    "episodios": 13
+                },
+                {
+                    "temporada": 5,
+                    "episodios": 12
+                },
+                {
+                    "temporada": 6,
+                    "episodios": 10
+                },
+                {
+                    "temporada": 7,
+                    "episodios": 11
+                },
+                {
+                    "temporada": 8,
+                    "episodios": 10
+                },
+                {
+                    "temporada": 9,
+                    "episodios": 9
+                },
+                {
+                    "temporada": 10,
+                    "episodios": 10
+                },
+                {
+                    "temporada": 11,
+                    "episodios": 10
+                },
+                {
+                    "temporada": 12,
+                    "episodios": 9
+                }
+            ],
+            "actoresPrincipales": [
+                "Evan Peters",
+                "Sarah Paulson",
+                "Lily Rabe",
+                "Frances Conroy",
+                "Denis O'Hare",
+                "Kathy Bates"
+            ],
+            "genero": [
+                "Horror",
+                "Antología",
+                "Sobrenatural"
+            ],
+            "estado": "en emisión",
+            "calificacion": 7.9
+        },
+        {
+            "id": 3,
+            "titulo": "Kingdom",
+            "creador": "Kim Eun-hee",
+            "anioLanzamiento": 2019,
+            "cantTemporadas": 2,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 6
+                },
+                {
+                    "temporada": 2,
+                    "episodios": 6
+                }
+            ],
+            "actoresPrincipales": [
+                "Ju Ji-hoon",
+                "Ryu Seung-ryong",
+                "Bae Doona",
+                "Kim Sung-kyu"
+            ],
+            "genero": [
+                "Histórico",
+                "Político",
+                "Horror",
+                "Thriller"
+            ],
+            "estado": "en emisión",
+            "calificacion": 8.3
+        },
+        {
+            "id": 4,
+            "titulo": "Soulmates",
+            "creador": "William Bridges y Brett Goldstein",
+            "anioLanzamiento": 2020,
+            "cantTemporadas": 1,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 6
+                }
+            ],
+            "actoresPrincipales": [
+                "Sarah Snook",
+                "David Costabile",
+                "Laia Costa"
+            ],
+            "genero": [
+                "Romance",
+                "Distópico",
+                "Antología"
+            ],
+            "estado": "finalizada",
+            "calificacion": 6.4
+        },
+        {
+            "id": 5,
+            "titulo": "Entrevista con el vampiro",
+            "creador": "Rolin Jones",
+            "anioLanzamiento": 2022,
+            "cantTemporadas": 2,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 7
+                },
+                {
+                    "temporada": 2,
+                    "episodios": 8
+                }
+            ],
+            "actoresPrincipales": [
+                "Jacob Anderson",
+                "Sam Reid",
+                "Eric Bogosian",
+                "Assad Zaman"
+            ],
+            "genero": [
+                "Terror gótico",
+                "Romance gótico",
+                "Gótico sureño",
+                "Drama",
+                "Fantasía oscura"
+            ],
+            "estado": "en emisión",
+            "calificacion": 7.6
+        },
+        {
+            "id": 6,
+            "titulo": "W: Dos Mundos",
+            "creador": "Song Jae Jung",
+            "anioLanzamiento": 2016,
+            "cantTemporadas": 1,
+            "episodiosPorTemporada": [
+                {
+                    "temporada": 1,
+                    "episodios": 16
+                }
+            ],
+            "actoresPrincipales": [
+                "Lee Jong-suk",
+                "Han Hyo-joo",
+                "Kim Eui-sung"
+            ],
+            "genero": [
+                "Fantasía",
+                "Romance",
+                "Comedia",
+                "Thriller",
+                "Acción"
+            ],
+            "estado": "finalizada",
+            "calificacion": 9.5
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="serie.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<serie cod="A01" titulo="The Office">
+    <personajes>
+        <personaje id="01" tipo="principal">
+            <nombre>Michael Scott</nombre>
+            <genero>M</genero>
+            <descripción>Es el director de la sucursal de Dunder Mifflin en Scranton y el personaje
+                central de la serieCon sus continuas bromas y convocatorias a reuniones absurdas,
+                quiere a toda costa crear un ambiente divertido y familiar. Sin embargo, los propios
+                empleados acaban cansados de la actitud pueril de su jefe, de sus bromas —a menudo
+                inapropiadas— y de sus comentarios homófobos, misóginos y racistas.</descripción>
+        </personaje>
+        <personaje id="02" tipo="principal">
+            <nombre>Dwight Schrute</nombre>
+            <genero>M</genero>
+            <descripción>Es el mejor vendedor de la sucursal y, también, el empleado más servil de
+                Scott. Testarudo y quisquilloso hasta límites insospechados, denota falta de empatía
+                y una actitud arrogante hacia sus compañeros, aunque a la vez adolece de habilidades
+                sociales; de hecho, llevado de su ingenuidad, cae a menudo en las bromas y enredos
+                de Jim.</descripción>
+        </personaje>
+        <personaje id="03" tipo="principal">
+            <nombre>Jim Halpert</nombre>
+            <genero>M</genero>
+            <descripción>A pesar de su inteligencia y sagacidad, se comporta con indolencia; de
+                hecho, cuando se aburre, dedica su ingenio a gastar bromas a Dwight. Sin embargo,
+                cuando ambos trabajan juntos forman un equipo de ventas muy eficiente.</descripción>
+        </personaje>
+        <personaje id="04" tipo="principal">
+            <nombre>Pam Beesly</nombre>
+            <genero>F</genero>
+            <descripción>Es la recepcionista de la oficina. Tiene un carácter dulce, tranquilo y
+                tímido, y a menudo tiene que soportar pacientemente el comportamiento inmaduro de
+                Michael, aunque al mismo tiempo suele colaborar con Jim en sus bromas a Dwight.</descripción>
+        </personaje>
+        <personaje id="05" tipo="secundario">
+            <nombre>Stanley Hudson</nombre>
+            <genero>M</genero>
+        </personaje>
+        <personaje id="06" tipo="secundario">
+            <nombre>Phyllis Lapin</nombre>
+            <genero>F</genero>
+        </personaje>
+    </personajes>
+    <trama>The Office (US) es una comedia de falso documental que retrata el tedioso día a día y las
+        absurdas relaciones de los empleados en la sucursal de Scranton de la empresa papelera
+        Dunder Mifflin. Liderados por el incompetente y desesperado por afecto jefe Michael Scott,
+        la serie destaca por su humor incómodo y las dinámicas entre personajes como Jim, Pam y
+        Dwight.</trama>
+        <hashtag nombre="serie_de_comedia"/>
+</serie>

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 30px;
+    background: #DCFAD9;
+    max-width: 1000px;
+    justify-self: center;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.principal {
+    padding: 20px;
+}
+
+.lateral {
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #24B417;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+nav {
+    background-color: #95F08C;
+    padding: 15px 20px;
+    display: flex;
+    justify-self: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #24B417;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3 ease;
+}
+
+nav ul li a:hover{
+    color: #E79818;
+}
+
+a {
+    color: #E79818;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3 ease;
+}
+
+a:hover {
+    color: #24B417;
+}
+
+footer {
+    grid-column: span 3;
+}
+
+dt {
+    font-weight: bold;
+}
+
+ol {
+    list-style: none;
+}
+
+.tituloExperiencia {
+    font-weight: bold;
+}
+
+dl {
+    margin-left: 20px;
+}
+
+.img_foto {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    justify-self: center
+}
+
+.img_titulo {
+    width: 100%;
+    height: auto;
+}

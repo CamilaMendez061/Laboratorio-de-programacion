@@ -1,0 +1,129 @@
+body {
+    margin: auto;
+    padding: 40px;
+    background: #A9D0DF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.layoutBlog {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.principal {
+    padding: 20px;
+    border-radius: 8px;
+    background: #377A95;
+}
+
+.lateral {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1,
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+header h1 {
+    color: #374B95;
+    text-align: center;
+    font-size: 60px;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+
+nav {
+    padding: 15px 20px;
+    display: flex;
+    justify-self: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #377A95;
+    transition: color 0.3 ease;
+}
+
+a:hover {
+    color: #13342D;
+}
+
+article {
+    border: 3px solid #A9D0DF;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+footer h2 {
+    font-size: 14px;
+}
+
+button:hover {
+    box-shadow: 3px 0px 20px #94909A;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.grupo_sorpresa,
+.grupo_likes {
+    margin: 20px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+button {
+    background-color: #379581;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.1s ease;
+    margin: 20px;
+}
+
+#contadorLikes {
+    font-weight: bold;
+}

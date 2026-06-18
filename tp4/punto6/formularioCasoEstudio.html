@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8" />
+        <title>Gestión de Alumnos</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+        <form action="#" class="formulario_gestionAlumnos" id="formulario_gestionAlumnos" novalidate>
+
+                <!-- CARRERA -->
+                <section id="datos_carrera">
+
+                        <h1>Datos de la carrera</h1>
+
+                        <!-- id carrera -->
+                        <div class="formulario_grupo" id="grupo_idCarrera">
+                                <label for="idCarrera" class="formulario_label">ID:</label>
+                                <input type="text" class="formulario_input" id="idCarrera" name="idCarrera" required>
+                                <p class="formulario_input-error">Ingrese un número de 4 dígitos
+                                </p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+
+                        <!-- nombre carrera -->
+                        <div class="formulario_grupo" id="grupo_nombreCarrera">
+                                <label for="nombreCarrera" class="formulario_label">Nombre:</label>
+                                <input type="text" class="formulario_input" id="nombreCarrera" name="nombreCarrera"
+                                        placeholder="Analista de Gatos" required>
+                                <p class="formulario_input-error">Ingrese el nombre de la
+                                        carrera. Solo se admiten letras.</p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+                </section>
+
+                <!-- ALUMNO -->
+                <section id="datos_alumno">
+
+                        <h1>Datos del alumno</h1>
+
+                        <!-- id alumno -->
+                        <div class="formulario_grupo" id="grupo_idAlumno">
+                                <label for="idAlumno" class="formulario_label">ID:</label>
+                                <input type="text" class="formulario_input" id="idAlumno" name="idAlumno" required>
+                                <p class="formulario_input-error">Ingrese un número de 5 dígitos
+                                </p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+
+                        <!-- nombre y apellido alumno -->
+                        <div class="formulario_grupo" id="grupo_nombreAlumno">
+                                <label for="nombreAlumno" class="formulario_label">Nombre y apellido:</label>
+                                <input type="text" class="formulario_input" id="nombreAlumno" name="nombreAlumno"
+                                        placeholder="Juanito Lopez" required>
+                                <p class="formulario_input-error">Ingrese el nombre del alumno.
+                                        Solo se
+                                        admiten letras.</p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+
+                        <!-- dni alumno -->
+                        <div class="formulario_grupo" id="grupo_dniAlumno">
+                                <label for="dniAlumno" class="formulario_label">DNI:</label>
+                                <input type="text" class="formulario_input" id="dniAlumno" name="dniAlumno"
+                                        placeholder="30111222" required>
+                                <p class="formulario_input-error">Ingrese el número de dni sin
+                                        puntos ni espacios.
+                                </p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+
+                        <!-- email alumno -->
+                        <div class="formulario_grupo" id="grupo_emailAlumno">
+                                <label for="emailAlumno" class="formulario_label">Email:</label>
+                                <input type="text" class="formulario_input" id="emailAlumno" name="emailAlumno"
+                                        placeholder="juanito@correo.com">
+                                <p class="formulario_input-error">Ingrese un correo con el
+                                        formato nombre@correo.com
+                                </p>
+                        </div>
+
+                        <!-- telefono alumno -->
+                        <div class="formulario_grupo" id="grupo_telefonoAlumno">
+                                <label for="telefonoAlumno" class="formulario_label">Teléfono:</label>
+                                <input type="text" class="formulario_input" id="telefonoAlumno" name="telefonoAlumno"
+                                        placeholder="2966112233">
+                                <p class="formulario_input-error">Ingrese solo numeros, sin
+                                        simbolos ni espacios.
+                                </p>
+                        </div>
+
+                        <!-- id de la carrera -->
+                        <div class="formulario_grupo" id="grupo_idCarreraAlumno">
+                                <label for="idCarreraAlumno" class="formulario_label">ID:</label>
+                                <input type="text" class="formulario_input" id="idCarreraAlumno" name="idCarreraAlumno"
+                                        required>
+                                <p class="formulario_input-error">Ingrese un número de 4 dígitos
+                                </p>
+                                <p class="formulario_required">Campo obligatorio</p>
+                        </div>
+                </section>
+
+                <!-- Botones -->
+                <button type="submit" class="formulario_btn">Validar</button>
+                <button type="reset" class="formulario_btn">Limpiar</button>
+
+                <p class="formulario_btn-exitoso">Expediente validado correctamente! :D</p>
+                <p class="formulario_btn-noExitoso">Se encontraron errores en el formulario :c</p>
+
+        </form>
+</body>
+
+</html>

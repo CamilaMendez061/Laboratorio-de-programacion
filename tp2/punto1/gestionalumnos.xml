@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../punto4/gestionalumnos_estilo.xsl"?>
+<?xml-model href="gestionalumnos.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<gestionAlumnos>
+
+    <alumnos>
+        <alumno>
+            <id>00001</id>
+            <apellidoNombre>Bodoque Juan Carlos</apellidoNombre>
+            <dni>23021552</dni>
+            <email>juan_carlos@gmail.com</email>
+            <telefono>15600217</telefono>
+            <carreraInscripto>0003</carreraInscripto>
+        </alumno>
+
+        <alumno>
+            <id>00002</id>
+            <apellidoNombre>Triviño Tulio</apellidoNombre>
+            <dni>20584789</dni>
+            <email>tulio.triviño@gmail.com</email>
+            <telefono>15421977</telefono>
+            <carreraInscripto>0001</carreraInscripto>
+        </alumno>
+
+        <alumno>
+            <id>00003</id>
+            <apellidoNombre>Amarilla Flor</apellidoNombre>
+            <dni>12345678</dni>
+            <email>florcita_amarilla@gmail.com</email>
+            <telefono>15000000</telefono>
+            <carreraInscripto>0002</carreraInscripto>
+        </alumno>
+
+    </alumnos>
+
+    <carreras>
+        <carrera>
+            <id>0001</id>
+            <nombreCarrera>Analista de Sistemas</nombreCarrera>
+        </carrera>
+        <carrera>
+            <id>0002</id>
+            <nombreCarrera>Licenciatura en Astronomía</nombreCarrera>
+        </carrera>
+        <carrera>
+            <id>0003</id>
+            <nombreCarrera>Ingeniería Química</nombreCarrera>
+        </carrera>
+    </carreras>
+
+</gestionAlumnos>

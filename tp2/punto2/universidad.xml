@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="universidad.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<universidad>
+
+    <nombre>Universidad Nacional de la Patagonia Austral</nombre>
+    <pais>Argentina</pais>
+    <sede>Río Gallegos</sede>
+    <direccion>Av. Gregores y Piloto Lero Rivera</direccion>
+
+    <carreras>
+        <carrera id="001">
+            <nombre>Analista de Sistemas</nombre>
+            <duracion>3 años</duracion>
+            <cantHoras>2235</cantHoras>
+            <materias>22</materias>
+        </carrera>
+        <carrera id="002">
+            <nombre>Ingeniería Química</nombre>
+            <duracion>5</duracion>
+            <cantHoras>4075</cantHoras>
+            <materias>35</materias>
+        </carrera>
+    </carreras>
+
+    <asignaturas>
+        <asignatura id="0001" codCarrera="001">
+            <nombre>Resolución de Problemas y Algoritmos</nombre>
+            <anioCarrera>1</anioCarrera>
+            <cuatrimestre>primero</cuatrimestre>
+            <totalHorasTeoria>40</totalHorasTeoria>
+            <totalHorasPractica>50</totalHorasPractica>
+        </asignatura>
+        <asignatura id="0002" codCarrera="001">
+            <nombre>Matemática I</nombre>
+            <anioCarrera>1</anioCarrera>
+            <cuatrimestre>primero</cuatrimestre>
+            <totalHorasTeoria>45</totalHorasTeoria>
+            <totalHorasPractica>45</totalHorasPractica>
+        </asignatura>
+        <asignatura id="0003" codCarrera="001">
+            <nombre>Aspectos Profesionales</nombre>
+            <anioCarrera>1</anioCarrera>
+            <cuatrimestre>primero</cuatrimestre>
+            <totalHorasTeoria>30</totalHorasTeoria>
+            <totalHorasPractica>30</totalHorasPractica>
+        </asignatura>
+        <asignatura id="0008" codCarrera="001">
+            <nombre>Arquitectura de Computadoras</nombre>
+            <anioCarrera>2</anioCarrera>
+            <cuatrimestre>primero</cuatrimestre>
+            <totalHorasTeoria>45</totalHorasTeoria>
+            <totalHorasPractica>45</totalHorasPractica>
+        </asignatura>
+        <asignatura id="0020" codCarrera="001">
+            <nombre>Laboratorio de Desarrollo de Software</nombre>
+            <anioCarrera>3</anioCarrera>
+            <cuatrimestre>segundo</cuatrimestre>
+            <totalHorasTeoria>40</totalHorasTeoria>
+            <totalHorasPractica>50</totalHorasPractica>
+        </asignatura>
+        <asignatura id="1527" codCarrera="002">
+            <nombre>Química General</nombre>
+            <anioCarrera>1</anioCarrera>
+            <cuatrimestre>primero</cuatrimestre>
+            <totalHorasTeoria>60</totalHorasTeoria>
+            <totalHorasPractica>60</totalHorasPractica>
+        </asignatura>
+    </asignaturas>
+
+    <alumnos>
+        <alumno id="00001">
+            <apellido>Way</apellido>
+            <nombre>Gerard</nombre>
+            <sexo>M</sexo>
+            <estudios>
+                <carrera codCarrera="001" />
+                <asignaturasInscripto>
+                    <asignatura codAsignatura="0001" />
+                    <asignatura codAsignatura="0002" />
+                </asignaturasInscripto>
+            </estudios>
+        </alumno>
+        <alumno id="00002">
+            <apellido>Flora</apellido>
+            <nombre>Margarita</nombre>
+            <sexo>F</sexo>
+            <estudios>
+                <carrera codCarrera="002" />
+                <asignaturasInscripto>
+                    <asignatura codAsignatura="1527" />
+                </asignaturasInscripto>
+            </estudios>
+        </alumno>
+    </alumnos>
+
+</universidad>

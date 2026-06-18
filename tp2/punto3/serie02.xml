@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="serie.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<serie cod="A02" titulo="Arcane" genero="acción">
+    <personajes>
+        <personaje id="01" tipo="principal">
+            <nombre>Powder - Jinx</nombre>
+            <genero>F</genero>
+            <descripción>Una niña huérfana que vaga por los suburbios de Zaun junto a su hermana
+                mayor, Vi y bajo la tutela de Vander, su padre adoptivo. Se caracteriza por su
+                actitud errática, inestable e impulsiva; esto debido a distintos traumas que sufrió
+                en el pasado</descripción>
+        </personaje>
+        <personaje id="02" tipo="principal">
+            <nombre>Vi - Violet</nombre>
+            <genero>F</genero>
+            <descripción>Una adolescente huérfana que vaga por los suburbios de Zaun junto a su
+                hermana pequeña, Powder y bajo la tutela de Vander, su padre adoptivo. Es una
+                experta del combate cuerpo a cuerpo, de sangre caliente y poca paciencia, aunque
+                toda una líder.</descripción>
+        </personaje>
+        <personaje id="03" tipo="principal">
+            <nombre>Viktor</nombre>
+            <genero>M</genero>
+            <descripción>La mano derecha y ayudante de Heimerdinger. Al igual que su amigo Jayce,
+                quiere usar la tecnología Hextech para ayudar a los más necesitados y crear nuevas
+                tecnologías en pro del progreso de Piltover.</descripción>
+        </personaje>
+        <personaje id="04" tipo="secundario">
+            <nombre>Marcus</nombre>
+            <genero>M</genero>
+        </personaje>
+    </personajes>
+    <trama>
+        Arcane es una serie de animación de Netflix, basada en el universo de League of Legends, 
+        que narra la creciente tensión y conflicto entre dos ciudades: la utópica Piltover y la 
+        oprimida Zaun. Se centra en el origen de las hermanas Vi y Powder (Jinx) y la división social
+        provocada por la tecnología mágica Hextech.
+    </trama>
+    <hashtag nombre="league_of_legends" />
+    <hashtag nombre="lol" />
+</serie>

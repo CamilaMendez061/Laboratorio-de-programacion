@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<informe_promedios>
+    <alumno>
+        <nombre>Maria Lopez</nombre>
+        <promedio>35,00</promedio>
+    </alumno>
+    <alumno>
+        <nombre>Juan Perez</nombre>
+        <promedio>72,50</promedio>
+    </alumno>
+    <alumno>
+        <nombre>Luis Gomez</nombre>
+        <promedio>60,00</promedio>
+    </alumno>
+    <promedio_total_alumnos>91,67</promedio_total_alumnos>
+</informe_promedios>

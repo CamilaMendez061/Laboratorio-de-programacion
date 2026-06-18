@@ -1,0 +1,78 @@
+{
+    "carreras": [
+        {
+            "id": 1,
+            "nombre": "Analista de Sistemas"
+        },
+        {
+            "id": 2,
+            "nombre": "Licenciatura en Sistemas"
+        },
+        {
+            "id": 3,
+            "nombre": "Licenciatura en Astronomía"
+        },
+        {
+            "id": 4,
+            "nombre": "Ingeniería Química"
+        }
+    ],
+    "alumnos": [
+        {
+            "idCarrera": 3,
+            "nombreApellido": "Bodoque Juan Carlos",
+            "id": 1,
+            "telefono": "15600217",
+            "dni": 23021552,
+            "email": "juan_carlos@gmail.com"
+        },
+        {
+            "idCarrera": 1,
+            "nombreApellido": "Triviño Tulio",
+            "id": 2,
+            "telefono": "15421977",
+            "dni": 20584789,
+            "email": "tulio.triviño@gmail.com"
+        },
+        {
+            "idCarrera": 2,
+            "nombreApellido": "Amarilla Flor",
+            "id": 3,
+            "telefono": "15000000",
+            "dni": 12345678,
+            "email": "florcita_amarilla@gmail.com"
+        },
+        {
+            "idCarrera": 4,
+            "nombreApellido": "Matcha Juana",
+            "id": 4,
+            "telefono": "15660322",
+            "dni": 33418900,
+            "email": "juanita_matcha@gmail.com"
+        },
+        {
+            "idCarrera": 1,
+            "nombreApellido": "Paredes Armando",
+            "id": 5,
+            "telefono": "15004466",
+            "dni": 41002879,
+            "email": "armando_papapa@gmail.com"
+        },
+        {
+            "idCarrera": 1,
+            "nombreApellido": "Lopez Marcos",
+            "id": 6,
+            "telefono": "15000263",
+            "dni": 26877444,
+            "email": "marquitos@gmail.com"
+        },
+        {
+            "idCarrera": 4,
+            "nombreApellido": "Rodriguez Teresa",
+            "id": 7,
+            "telefono": "15666333",
+            "dni": 25897111,
+            "email": "tere.rodriguez@gmail.com"
+        }
+    ]
+}

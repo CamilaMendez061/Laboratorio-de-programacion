@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8" />
+        <title>Expediente</title>
+        <script src="script_formulario.js" defer></script>
+        <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+        <form action="#" class="formularioExpediente" id="formularioExpediente" novalidate>
+
+                <!-- Número de expediente -->
+                <div class="formulario_grupo" id="grupo_numExpediente">
+                        <label for="numExpediente" class="formulario_label">Número de expediente:</label>
+                        <input type="text" class="formulario_input" id="numExpediente" name="numExpediente"
+                                placeholder="EXP-0000/25" required>
+                        <p class="formulario_input-error" id="errorNumExpediente">Ingrese un número de 4 dígitos</p>
+                        <p class="formulario_required">Campo obligatorio</p>
+                </div>
+
+                <!-- Área -->
+                <div class="formulario_grupo" id="grupo_area">
+                        <label for="area" class="formulario_label">Área:</label>
+                        <div class="formulario_select">
+                                <select id="area" name="area">
+                                        <option value="" disabled selected>Elija una opción</option>
+                                        <option label="Mesa de entrada" value="Mesa de entrada">Mesa de entrada</option>
+                                        <option label="Jurídico" value="Jurídico">Jurídico</option>
+                                        <option label="Informática" value="Informática">Informática</option>
+                                        <option label="Administración" value="Administración">Administración</option>
+                                </select>
+                        </div>
+                </div>
+
+                <!-- Típo de trámite -->
+                <div class="formulario_grupo" id="grupo_tipoTramite">
+                        <label for="tipoTramite" class="formulario_label">Tipo de trámite:</label>
+                        <div class="formulario_select">
+                                <select id="tipoTramite" name="tipoTramite">
+                                        <option value="" disabled selected>Elija una opción</option>
+                                        <option label="Urgente" value="urgente">Urgente</option>
+                                        <option label="Normal" value="normal">Normal</option>
+                                        <option label="Bajo" value="bajo">Bajo</option>
+                                </select>
+                        </div>
+                </div>
+
+                <!-- Cantidad de días en trámite -->
+                <div class="formulario_grupo" id="grupo_diasTramite">
+                        <label for="diasTramite" class="formulario_label">Cantidad de días en trámite:</label>
+                        <input type="number" class="formulario_input" id="diasTramite" name="diasTramite" min="1"
+                                step="1" required>
+                        <p class="formulario_input-error">Sólo se permiten dígitos, de valor mayor a 0.</p>
+                        <p class="formulario_required">Campo obligatorio</p>
+                </div>
+
+                <!-- Estado -->
+                <div class="formulario_grupo" id="grupo_estado">
+                        <label for="estado" class="formulario_label">Estado:</label>
+                        <div class="formulario_radio">
+                                <div class="radio-item">
+                                        <input type="radio" class="formulario_input" id="estado-pendiente" name="estado"
+                                                value="pendiente">
+                                        <label for="estado-pendiente" class="formulario_label">Pendiente</label>
+                                </div>
+
+                                <div class="radio-item">
+                                        <input type="radio" class="formulario_input" id="estado-en_proceso" name="estado"
+                                                value="en_proceso">
+                                        <label for="estado-en_proceso" class="formulario_label">En proceso</label>
+                                </div>
+
+                                <div class="radio-item">
+                                        <input type="radio" class="formulario_input" id="estado-finalizado"
+                                                name="estado" value="finalizado">
+                                        <label for="estado-finalizado" class="formulario_label">Finalizado</label>
+                                </div>
+                        </div>
+                        <p class="formulario_input-error">Seleccione un estado.</p>
+                        <p class="formulario_required">Campo obligatorio</p>                
+                </div>
+
+                <!-- Responsable -->
+                <div class="formulario_grupo" id="grupo_responsable">
+                        <label for="responsable" class="formulario_label">Responsable:</label>
+                        <input type="text" class="formulario_input" id="responsable" name="responsable"
+                                title="Ingrese el nombre de la persona responsable" required>
+                        <p class="formulario_input-error">El responsable solo puede contener letras.</p>
+                        <p class="formulario_required">Campo obligatorio</p>
+                </div>
+
+                <!-- Cantidad de expedientes gestionados hoy -->
+                <div class="formulario_grupo" id="grupo_cantExpedientes">
+                        <label for="cantExpedientes" class="formulario_label">Cantidad de expedientes gestionados
+                                hoy:</label>
+                        <input type="number" class="formulario_input" id="cantExpedientes" name="cantExpedientes"
+                                min="0" step="1" required>
+                        <p class="formulario_input-error">Sólo se permiten dígitos, de valor mayor o igual a 0.</p>
+                        <p class="formulario_required">Campo obligatorio</p>
+                </div>
+
+                <!-- Horas trabajadas -->
+                <div class="formulario_grupo" id="grupo_horasTrabajadas">
+                        <label for="horasTrabajadas" class="formulario_label">Horas trabajadas:</label>
+                        <input type="number" class="formulario_input" id="horasTrabajadas" name="horasTrabajadas"
+                                min="1" max="12" step="1" required>
+                        <p class="formulario_input-error">Sólo se permiten dígitos, de valor entre 0 y 12.</p>
+                        <p class="formulario_required">Campo obligatorio</p>
+                </div>
+
+                <!-- Botones -->
+                <button type="submit" class="formulario_btn">Validar expediente</button>
+                <button type="reset" class="formulario_btn">Limpiar</button>
+                <p class="formulario_btn-exitoso">Expediente validado correctamente! :D</p>
+                <p class="formulario_btn-noExitoso">Se encontraron errores en el formulario</p>
+
+                <button type="button" class="formulario_btn" id="btn_calcularEstadistica">Calcular estadística</button>
+                <p class="formulario_btn-estadisticaResultado"></p>
+                <p class="formulario_btn-estadisticaBaja">Productividad baja</p>
+                <p class="formulario_btn-estadisticaMedia">Productividad media</p>
+                <p class="formulario_btn-estadisticaAlta">Productividad alta</p>
+
+        </form>
+</body>
+
+</html>

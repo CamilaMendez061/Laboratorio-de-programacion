@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnosAprobados>
+   <alumno>
+      <nombre>Juan Perez</nombre>
+      <materia> Resolución </materia>
+      <carrera>AdeS</carrera>
+      <nota>90</nota>
+   </alumno>
+</alumnosAprobados>

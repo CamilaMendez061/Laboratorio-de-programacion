@@ -1,0 +1,10 @@
+{
+  "numExpediente": "EXP-3334/25",
+  "area": "Jurídico",
+  "tipoTramite": "normal",
+  "diasTramite": 3,
+  "estado": "en_proceso",
+  "responsable": "CAMILA",
+  "cantExpedientes": 10,
+  "horasTrabajadas": 3
+}

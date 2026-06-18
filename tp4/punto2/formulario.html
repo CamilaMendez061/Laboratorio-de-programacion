@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8" />
+        <title>Expediente</title>
+</head>
+<body>
+        <form action="#">
+                <h4>Datos del expediente</h4>
+
+                <label for="numero-expediente">Número de experiente:</label>
+                <input type="text" id="numero-expediente" name="numero_expediente" placeholder="EXP-0000/25" pattern="EXP-[0-9]{4}/[0-9]{2}" title="El formato debe ser EXP-0000/25" required>
+                <br>
+
+                <label for="area">Área:</label>
+                <select  id="area" name="area" >
+                        <option value="" disabled selected>Elija una opción</option>
+                        <option label="Mesa de entrada" value="Mesa de entrada">Mesa de entrada</option>
+                        <option label="Jurídico" value="Jurídico">Jurídico</option>
+                        <option label="Informática" value="Informática">Informática</option>
+                        <option label="Administración" value="Administración">Administración</option>
+                </select>
+                <br>
+
+                <label for="tipo-tramite">Tipo de trámite:</label>
+                <select id="tipo-tramite" name="tipo_tramite">
+                        <option  value="" disabled selected>Elija una opción</option>
+                        <option label="Urgente" value="urgente">Urgente</option>
+                        <option label="Normal" value="normal">Normal</option>
+                        <option label="Bajo" value="bajo">Bajo</option>
+                </select>
+                <br>
+
+                <h4>Datos de gestión</h4>
+
+                <label for="cantidad-dias-tramite">Cantidad de días en trámite:</label>
+                <input type="number" id="cantidad-dias-tramite" name="cantidad_dias_tramite" min="1" step="1" required>
+                <br>
+
+                <p>Estado:</p>
+                <input type="radio" id="estado-pendiente" name="estado" value="pendiente">
+                <label for="estado-pendiente">Pendiente</label>
+
+                <input type="radio" id="estado" name="estado" value="en_proceso">
+                <label for="estado-en-proceso">En proceso</label>
+
+                <input type="radio" id="estado-finalizado" name="estado" value="finalizado">
+                <label for="estado-finalizado">Finalizado</label>
+                <br>
+                
+                <label for="responsable">Responsable:</label>
+                <input type="text" id="responsable" name="responsable" title="Ingrese el nombre de la persona responsable" required>
+                <br>
+
+                <label for="cantidad-expedientes">Cantidad de expedientes gestionados hoy:</label>
+                <input type="number" id="cantidad-expedientes" name="cantidad_expedientes" required>
+                <br>
+
+                <label for="horas-trabajadas">Horas trabajadas:</label>
+                <input type="number" id="horas-trabajadas" name="horas_trabajadas" min="1" max="12" step="1" required>
+                <br>
+
+                <!-- Botones -->
+                <button type="submit">Validar expediente</button>
+                <button type="reset">Limpiar</button>
+
+        </form>
+</body>
+
+</html>
