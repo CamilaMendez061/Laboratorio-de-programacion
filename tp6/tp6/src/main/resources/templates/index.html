@@ -12,7 +12,7 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
   <!-- estilos propios -->
-  <link rel="stylesheet" href="/tp6/src/main/resources/static/estilos.css">
+  <link rel="stylesheet" th:href="@{/estilos.css}">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
           <td th:text="${alumno.carrera.nombre}">Carrera</td>
           <td>
             <a th:href="@{/alumnos/editar/{id}(id=${alumno.id})}" class="btn btn-info" role="button">Modificar</a>
-            <a th:href="@{/alumnos/{id}(id=${alumno.id})}" class="btn btn-danger" role="button">Eliminar</a>
+            <a th:href="@{/alumnos/{id}(id=${alumno.id})}" class="btn btn-danger" role="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este alumno?')">Eliminar</a>
           </td>
         </tr>
       </tbody>

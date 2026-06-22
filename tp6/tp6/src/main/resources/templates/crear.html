@@ -12,7 +12,7 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
   <!-- estilos propios -->
-  <link rel="stylesheet" href="/tp6/src/main/resources/static/estilos.css">
+  <link rel="stylesheet" th:href="@{/estilos.css}">
 
 </head>
 
@@ -68,6 +68,11 @@
       </div>
     </div>
   </div>
+
+    <div class="d-flex justify-content-center">
+    <a th:href="@{/alumnos}" class="btn btn-secondary" role="button">Volver al listado</a>
+  </div>
+
 
   <footer>
     <span>Laboratorio de Programación 2026</span>
