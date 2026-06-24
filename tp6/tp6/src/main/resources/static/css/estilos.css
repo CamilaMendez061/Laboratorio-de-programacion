@@ -27,3 +27,18 @@ footer {
     font-size: 1.2em;
     cursor: pointer;
 }
+
+/* -------- validaciones del formulario -------- */
+.formulario_required,
+.formulario_input-error {
+    display: none;
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.formulario_required-activo,
+.formulario_input-error-activo {
+    display: block;
+}

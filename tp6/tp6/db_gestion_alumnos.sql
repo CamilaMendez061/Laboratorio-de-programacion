@@ -11,8 +11,8 @@ CREATE TABLE alumnos (
     id INT NOT NULL AUTO_INCREMENT,
     apellido_nombre VARCHAR(30) NOT NULL,
     dni INT NOT NULL,
-    email VARCHAR(30),
-    telefono VARCHAR(15),
+    email VARCHAR(30) NOT NULL,
+    telefono VARCHAR(15) NOT NULL,
     carrera_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (carrera_id) REFERENCES carreras(id)

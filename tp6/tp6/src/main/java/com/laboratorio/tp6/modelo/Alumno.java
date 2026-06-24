@@ -23,10 +23,10 @@ public class Alumno {
     @Column(name = "dni", nullable = false)
     private int dni;
 
-    @Column(name = "email", length = 30)
+    @Column(name = "email", length = 30, nullable = false)
     private String email;
 
-    @Column(name = "telefono", length = 15)
+    @Column(name = "telefono", length = 15, nullable = false)
     private String telefono;
 
     @ManyToOne
