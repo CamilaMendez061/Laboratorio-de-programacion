@@ -30,7 +30,7 @@ public class Alumno {
     private String telefono;
 
     @ManyToOne
-    @JoinColumn(name = "carrera_id")
+    @JoinColumn(name = "carrera_id", nullable = false)
     private Carrera carrera;
 
     public Alumno() {

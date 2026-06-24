@@ -13,7 +13,7 @@ CREATE TABLE alumnos (
     dni INT NOT NULL,
     email VARCHAR(30),
     telefono VARCHAR(15),
-    carrera_id INT,
+    carrera_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (carrera_id) REFERENCES carreras(id)
 );
