@@ -7,5 +7,5 @@ import com.laboratorio.tp6.modelo.Alumno;
 
 @Repository
 public interface AlumnoRepositorio extends JpaRepository<Alumno, Integer> {
-
+    int countByCarreraId(Integer carreraId);
 }

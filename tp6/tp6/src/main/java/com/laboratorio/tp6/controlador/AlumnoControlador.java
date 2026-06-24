@@ -1,6 +1,9 @@
 package com.laboratorio.tp6.controlador;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.laboratorio.tp6.modelo.Alumno;
 import com.laboratorio.tp6.modelo.Carrera;
+import com.laboratorio.tp6.repositorio.AlumnoRepositorio;
+import com.laboratorio.tp6.repositorio.CarreraRepositorio;
 import com.laboratorio.tp6.servicio.AlumnoServicio;
 import com.laboratorio.tp6.servicio.CarreraServicio;
 
@@ -22,10 +27,16 @@ public class AlumnoControlador {
 
     @Autowired
     private AlumnoServicio servicio;
-    
+
     @Autowired
     private CarreraServicio carrera;
-    
+
+    @Autowired
+    private CarreraRepositorio carreraRepositorio;
+
+    @Autowired
+    private AlumnoRepositorio alumnoRepositorio;
+
     @GetMapping
     public String listarAlumnos(Model modelo) {
         List<Alumno> alumnos = servicio.listar();
@@ -75,4 +86,20 @@ public class AlumnoControlador {
         return "redirect:/alumnos";
     }
 
+    @GetMapping("/carreras")
+    public String mostrarCantAlumnos(Model modelo) {
+        List<Carrera> carreras = carreraRepositorio.findAll();
+
+        Map<Integer, Integer> cantAlumnosPorCarrera = new HashMap<>();
+
+        for (Carrera c : carreras) {
+            int cantAlumnos = alumnoRepositorio.countByCarreraId(c.getId());
+            cantAlumnosPorCarrera.put(c.getId(), cantAlumnos);
+        }
+
+        modelo.addAttribute("carreras", carreras);
+        modelo.addAttribute("cantAlumnosPorCarrera", cantAlumnosPorCarrera);
+
+        return "carreras";
+    }
 }

@@ -22,10 +22,14 @@
   <div class="container my-5">
 
     <!-- Agregar alumno -->
-    <div class="row">
+    <div class="row text-center">
       <div class="col-lg-3">
         <a th:href="@{/alumnos/nuevo}" class="btn btn-info btn-sm mb3" role="button">Agregar alumno</a>
       </div>
+      <div class="col-lg-3">
+        <a th:href="@{/alumnos/carreras}" class="btn btn-info btn-sm mb3" role="button">Ver carreras</a>
+      </div>
+
     </div>
     <br>
 
@@ -50,7 +54,8 @@
           <td th:text="${alumno.carrera.nombre}">Carrera</td>
           <td>
             <a th:href="@{/alumnos/editar/{id}(id=${alumno.id})}" class="btn btn-info" role="button">Modificar</a>
-            <a th:href="@{/alumnos/{id}(id=${alumno.id})}" class="btn btn-danger" role="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este alumno?')">Eliminar</a>
+            <a th:href="@{/alumnos/{id}(id=${alumno.id})}" class="btn btn-danger" role="button"
+              onclick="return confirm('¿Estás seguro de que quieres eliminar este alumno?')">Eliminar</a>
           </td>
         </tr>
       </tbody>
