@@ -26,17 +26,12 @@ public class Carrera {
     @OneToMany(mappedBy = "carrera", cascade = CascadeType.ALL)
     private List<Alumno> alumnos = new ArrayList<>();
 
-    public void agregarAlumno(Alumno alumno) {
-        alumnos.add(alumno);
-        alumno.setCarrera(this);
+    public Carrera() {
+
     }
 
     public int getId() {
         return id;
-    }
-
-    public Carrera () {
-
     }
 
     public void setId(int id) {
@@ -49,6 +44,15 @@ public class Carrera {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public List<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public void agregarAlumno(Alumno alumno) {
+        alumnos.add(alumno);
+        alumno.setCarrera(this);
     }
 
 }

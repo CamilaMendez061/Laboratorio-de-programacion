@@ -19,9 +19,9 @@
 
   <h1>Listado de Carreras</h1>
 
-  <div class="d-flex justify-content-center">
-    <a th:href="@{/alumnos}" class="btn btn-secondary" role="button">Volver</a>
-  </div>
+      <div class="col-lg-3">
+        <a th:href="@{/}" class="btn btn-info btn-sm mb3" role="button">Volver al inicio</a>
+      </div>
 
 
   <div class="container my-5">
@@ -37,7 +37,7 @@
       <tbody class="table-group-divider">
         <tr th:each="carrera : ${carreras}">
           <td th:text="${carrera.nombre}">Nombre</td>
-          <td th:text="${cantAlumnosPorCarrera.get(carrera.id)}">Cant. Alumnos</td>
+          <td th:text="${carrera.alumnos.size()}">Cant. Alumnos</td>
         </tr>
       </tbody>
     </table>
